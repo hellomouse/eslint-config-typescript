@@ -1,0 +1,33 @@
+{
+  "name": "@hellomouse/eslint-config",
+  "version": "1.0.0",
+  "description": "Official ESLint config for Hellomouse, based of of Google's config",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hellomouse/eslint-config.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig"
+  ],
+  "author": "Hellomouse LTD.",
+  "contributors": [
+    "iczero <iczero4@gmail.com>",
+    "wolfy1339 <webmaster@wolfy1339.com>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hellomouse/eslint-config/issues"
+  },
+  "homepage": "https://github.com/hellomouse/eslint-config#readme",
+  "peerDependencies": {
+    "eslint": ">=5.16.0"
+  },
+  "dependencies": {
+    "eslint-config-google": "^0.13.0"
+  }
+}
