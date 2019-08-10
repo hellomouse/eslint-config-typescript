@@ -1,6 +1,6 @@
 {
   "name": "@hellomouse/eslint-config",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Official ESLint config for Hellomouse, based off of Google's config",
   "main": "index.js",
   "scripts": {
