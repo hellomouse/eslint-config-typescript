@@ -10,6 +10,7 @@ module.exports = {
     'no-console': 'off',
     'object-curly-spacing': ['error', 'always'],
     'space-infix-ops': ['error', { int32Hint: true }],
-    'max-len': ['error', 120]
+    'max-len': ['error', 120],
+    'eqeqeq': ['error', 'always']
   }
 };
