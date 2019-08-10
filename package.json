@@ -1,7 +1,7 @@
 {
   "name": "@hellomouse/eslint-config",
-  "version": "1.0.0",
-  "description": "Official ESLint config for Hellomouse, based of of Google's config",
+  "version": "1.0.1",
+  "description": "Official ESLint config for Hellomouse, based off of Google's config",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,7 +14,7 @@
     "eslint",
     "eslintconfig"
   ],
-  "author": "Hellomouse LTD.",
+  "author": "Hellomouse",
   "contributors": [
     "iczero <iczero4@gmail.com>",
     "wolfy1339 <webmaster@wolfy1339.com>"
