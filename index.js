@@ -1,8 +1,11 @@
 module.exports = {
   extends: [
     'eslint:recommended',
-    'eslint-config-google'
+    'eslint-config-google',
+    'plugin:jsdoc/recommended'
   ],
+  // use new jsdoc comment as jsdoc functionality in core eslint is deprecated
+  plugins: ['jsdoc'],
   rules: {
     // highly subjective: dangling commas feel weird,
     'comma-dangle': ['error', 'never'],
@@ -38,6 +41,9 @@ module.exports = {
 
     // errors due to unintentional reassigning generally are quite rare, in addition,
     // changing from const to let is a bit annoying
-    'prefer-const': 'off'
+    'prefer-const': 'off',
+
+    // use jsdoc/require-jsdoc instead
+    'require-jsdoc': 'off'
   }
 };
