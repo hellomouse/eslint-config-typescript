@@ -56,7 +56,13 @@ module.exports = {
      * @return {Number} The result of the operation
      */
     'jsdoc/require-param-description': 'off',
-    'jsdoc/require-returns-description': 'off'
+    'jsdoc/require-returns-description': 'off',
+
+    // not everything needs to be a complete sentence
+    'jsdoc/require-description-complete-sentence': 'off',
+
+    // most things explain themselves
+    'jsdoc/require-example': 'off'
   },
   settings: {
     jsdoc: {
