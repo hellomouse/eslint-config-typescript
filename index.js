@@ -44,7 +44,19 @@ module.exports = {
     'prefer-const': 'off',
 
     // use jsdoc/require-jsdoc instead
-    'require-jsdoc': 'off'
+    'require-jsdoc': 'off',
+
+    // descriptions on params and return is often redundant
+    // for example:
+    /*
+     * Adds given numbers
+     *
+     * @param {Number} a First number
+     * @param {Number} b Second number
+     * @return {Number} The result of the operation
+     */
+    'jsdoc/require-param-description': 'off',
+    'jsdoc/require-returns-description': 'off'
   },
   settings: {
     jsdoc: {
@@ -55,5 +67,5 @@ module.exports = {
         augments: { replacement: 'extends' }
       }
     }
-}
+  }
 };
