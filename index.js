@@ -45,5 +45,15 @@ module.exports = {
 
     // use jsdoc/require-jsdoc instead
     'require-jsdoc': 'off'
-  }
+  },
+  settings: {
+    jsdoc: {
+      tagNamePreference: {
+        // keep the ones currently in use
+        returns: { replacement: 'return' },
+        yields: { replacement: 'yield' },
+        augments: { replacement: 'extends' }
+      }
+    }
+}
 };
