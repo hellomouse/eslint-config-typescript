@@ -62,7 +62,10 @@ module.exports = {
     'jsdoc/require-description-complete-sentence': 'off',
 
     // most things explain themselves
-    'jsdoc/require-example': 'off'
+    'jsdoc/require-example': 'off',
+
+    // don't worry about whether a newline exists after jsdoc description
+    'jsdoc/newline-after-description': 'off'
   },
   settings: {
     jsdoc: {
