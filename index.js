@@ -46,6 +46,9 @@ module.exports = {
     // use jsdoc/require-jsdoc instead
     'require-jsdoc': 'off',
 
+    // allow while (true)
+    'no-constant-condition': ['error', { checkLoops: false }],
+
     // descriptions on params and return is often redundant
     // for example:
     /*
