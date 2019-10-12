@@ -1,12 +1,20 @@
 module.exports = {
   extends: [
     'eslint:recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
     'eslint-config-google',
+    'plugin:@typescript-eslint/recommended',
     'plugin:jsdoc/recommended'
   ],
   // use new jsdoc comment as jsdoc functionality in core eslint is deprecated
-  plugins: ['jsdoc'],
+  plugins: ['jsdoc', '@typescript-eslint'],
+  parser: '@typescript-eslint/parser',
   rules: {
+    // Override @typescript-eslint/recommended rules with updated Google rules for TS
+    '@typescript-eslint/camelcase': ['error', {properties: 'never'}],
+    '@typescript-eslint/no-unused-vars': ['warn', {args: 'none'}],
+    'prefer-const': ['error', {destructuring: 'all'}],
+
     // highly subjective: dangling commas feel weird,
     'comma-dangle': ['error', 'never'],
 
@@ -14,7 +22,7 @@ module.exports = {
     'arrow-parens': ['error', 'as-needed'],
 
     // 2 spaces for indent
-    'indent': ['error', 2, { SwitchCase: 1 }],
+    '@typescript-eslint/indent': ['error', 2, { SwitchCase: 1 }],
 
     // console.log() is often used in node.js
     'no-console': 'off',
