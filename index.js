@@ -13,7 +13,6 @@ module.exports = {
     // Override @typescript-eslint/recommended rules with updated Google rules for TS
     '@typescript-eslint/camelcase': ['error', {properties: 'never'}],
     '@typescript-eslint/no-unused-vars': ['warn', {args: 'none'}],
-    'prefer-const': ['error', {destructuring: 'all'}],
 
     // highly subjective: dangling commas feel weird,
     'comma-dangle': ['error', 'never'],
