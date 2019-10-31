@@ -11,8 +11,11 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   rules: {
     // Override @typescript-eslint/recommended rules with updated Google rules for TS
-    '@typescript-eslint/camelcase': ['error', {properties: 'never'}],
-    '@typescript-eslint/no-unused-vars': ['warn', {args: 'none'}],
+    '@typescript-eslint/camelcase': ['error', { properties: 'never' }],
+    '@typescript-eslint/no-unused-vars': ['warn', { args: 'none' }],
+
+    // this rule does not understand jsdoc in typescript
+    'valid-jsdoc': 'off',
 
     // highly subjective: dangling commas feel weird,
     'comma-dangle': ['error', 'never'],
