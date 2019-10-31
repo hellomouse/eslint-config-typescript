@@ -3,11 +3,10 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/eslint-recommended',
     'eslint-config-google',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:jsdoc/recommended'
+    'plugin:@typescript-eslint/recommended'
   ],
-  // use new jsdoc comment as jsdoc functionality in core eslint is deprecated
-  plugins: ['jsdoc', '@typescript-eslint'],
+  // eslint-plugin-jsdoc does not support typescript-style jsdoc
+  plugins: ['@typescript-eslint'],
   parser: '@typescript-eslint/parser',
   rules: {
     // Override @typescript-eslint/recommended rules with updated Google rules for TS
@@ -57,37 +56,6 @@ module.exports = {
     'require-jsdoc': 'off',
 
     // allow while (true)
-    'no-constant-condition': ['error', { checkLoops: false }],
-
-    // descriptions on params and return is often redundant
-    // for example:
-    /*
-     * Adds given numbers
-     *
-     * @param {Number} a First number
-     * @param {Number} b Second number
-     * @return {Number} The result of the operation
-     */
-    'jsdoc/require-param-description': 'off',
-    'jsdoc/require-returns-description': 'off',
-
-    // not everything needs to be a complete sentence
-    'jsdoc/require-description-complete-sentence': 'off',
-
-    // most things explain themselves
-    'jsdoc/require-example': 'off',
-
-    // don't worry about whether a newline exists after jsdoc description
-    'jsdoc/newline-after-description': 'off'
-  },
-  settings: {
-    jsdoc: {
-      tagNamePreference: {
-        // keep the ones currently in use
-        returns: { replacement: 'return' },
-        yields: { replacement: 'yield' },
-        augments: { replacement: 'extends' }
-      }
-    }
+    'no-constant-condition': ['error', { checkLoops: false }]
   }
 };
