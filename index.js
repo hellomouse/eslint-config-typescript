@@ -13,6 +13,14 @@ module.exports = {
     '@typescript-eslint/camelcase': ['error', { properties: 'never' }],
     '@typescript-eslint/no-unused-vars': ['warn', { args: 'none' }],
 
+    // any exists for a reason
+    '@typescript-eslint/no-explicit-any': 'off',
+
+    // this rule only makes it more complicated to do @ts-ignore:
+    // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+    // @ts-ignore
+    '@typescript-eslint/ban-ts-ignore': 'off',
+
     // this rule does not understand jsdoc in typescript
     'valid-jsdoc': 'off',
 
@@ -24,6 +32,9 @@ module.exports = {
 
     // 2 spaces for indent
     '@typescript-eslint/indent': ['error', 2, { SwitchCase: 1 }],
+
+    // disable eslint/indent which doesn't work for typescript
+    'indent': 'off',
 
     // console.log() is often used in node.js
     'no-console': 'off',
